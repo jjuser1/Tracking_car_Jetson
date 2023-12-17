@@ -1,10 +1,10 @@
+# -*- coding: utf-8 -*-
 import cv2
 import tkinter as tk
 from tkinter import ttk, simpledialog, messagebox
 from ultralytics import YOLO
 from PIL import Image, ImageTk
 import re
-#-*-coding: utf-8-*-
 
 class VideoTrackerApp:
     def __init__(self, root, video_path):
@@ -59,7 +59,7 @@ class VideoTrackerApp:
                 for id, value in self.charge.items():
                     if value[0] == lane_number and value[1] == charge_value:
                         del self.charge[id]
-                        message = f"Settled {charge_value}Won for Lane {lane_number}."
+                        message = "Settled {}won for Lane {}.".format(charge_value, lane_number)
                         messagebox.showinfo("Settled", message)
                         break
                 else:
@@ -77,7 +77,7 @@ class VideoTrackerApp:
                 a = self.check_coordinates_against_ranges(detections, self.txt_result)
                 self.tip(a)
                 chargeitem = list(self.charge.items())
-                data = [(str(int(det[1][0]))+"Lane", str(int(det[0]))+"th Vehicle", str(det[1][1])+"Won") for det in chargeitem]
+                data = [(str(int(det[1][0]))+"Lane", str(int(det[0]))+"th Vehicle", str(det[1][1])+"won") for det in chargeitem]
 
                 self.populate_tree(data)
 
