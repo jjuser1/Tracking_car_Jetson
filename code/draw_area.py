@@ -1,7 +1,7 @@
+# -*- coding: utf-8 -*-
 import tkinter as tk
 from tkinter import messagebox
 from PIL import Image, ImageTk
-#-*-coding: utf-8-*-
 
 class ImageSelectorApp:
     def __init__(self, root):
@@ -117,7 +117,7 @@ class ImageSelectorApp:
     def update_text_widget(self):
         self.text_widget.delete(1.0, tk.END)
         for i, coords in enumerate(self.polygon_coords, start=1):
-            self.text_widget.insert(tk.END, f"{i} Lane : {coords}\n")
+            self.text_widget.insert(tk.END, "{} Lane : {}\n".format(i, coords))
 
     def delete_coordinates(self, event):
         if self.polygon_coords:
