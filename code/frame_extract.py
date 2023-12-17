@@ -1,6 +1,6 @@
+# -*- coding: utf-8 -*-
 import cv2
 from tkinter import messagebox
-#-*-coding: utf-8-*-
 
 def extract_frame():
     # Open the video file
@@ -31,6 +31,6 @@ def extract_frame():
     # Close the video file
     cap.release()
 
-    messagebox.showinfo("Extraction Complete", f"Frame extraction from the video successful.")
+    messagebox.showinfo("Extraction Complete", "Frame extraction from the video successful.")
 
 extract_frame()
