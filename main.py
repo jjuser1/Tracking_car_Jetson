@@ -1,5 +1,6 @@
+# -*- coding: utf-8 -*-
 import subprocess
-#-*-coding: utf-8-*-
+
 def run_program():
     try:
         subprocess.run(['python', 'code/frame_extract.py'])
