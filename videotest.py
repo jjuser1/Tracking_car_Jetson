@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import cv2
+import sys
 import tkinter as tk
 from tkinter import ttk, simpledialog, messagebox
 from ultralytics import YOLO
