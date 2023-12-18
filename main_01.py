@@ -4,7 +4,7 @@ import subprocess
 import os
 
 def open_file_dialog():
-    file_path = filedialog.askopenfilename(filetypes=[("Video files", "*.mp4;*.avi")])
+    file_path = filedialog.askopenfilename(filetypes=[("Video files", "*.mp4")])
     if file_path:
         file_name = os.path.basename(file_path)
         print(file_name)
@@ -21,8 +21,10 @@ def run_program(file_name):
         print("Unable to find the file 'draw_area.py'.")
     try:
         subprocess.run(['python3', 'videotest.py',file_name])
+
     except FileNotFoundError:
         print("Unable to find the file 'videotest.py'.")
+    root.destroy()
 
 # Tkinter 창 생성
 root = tk.Tk()
@@ -34,5 +36,3 @@ button.pack(pady=20)
 
 # Tkinter 이벤트 루프 시작
 root.mainloop()
-
-
