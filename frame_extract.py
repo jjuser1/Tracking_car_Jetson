@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 import cv2
+import sys
 from tkinter import messagebox
 
 def extract_frame():
     # Open the video file
-    input_video_path = 'vehicle.mp4'
+    input_video_path = sys.argv[1]
     output_image_path = 'output_frame.jpg'
     frame_index = 5
     cap = cv2.VideoCapture(input_video_path)
