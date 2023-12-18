@@ -170,6 +170,6 @@ class VideoTrackerApp:
         return charge_values.get(cls, 700)
 
 if __name__ == "__main__":
-    video_path = 'vehicle.mp4'
+    video_path = sys.argv[1]
     root = tk.Tk()
     app = VideoTrackerApp(root, video_path)
