@@ -19,6 +19,7 @@ class VideoTrackerApp:
         self.root.title("Toll Booth CCTV Video")
 
         self.model = YOLO('best.engine', task = "detect")
+        #self.model = YOLO('best.pt')
         self.video_path = video_path
         self.cap = cv2.VideoCapture(video_path)
 
