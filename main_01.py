@@ -12,15 +12,15 @@ def open_file_dialog():
 
 def run_program(file_name):
     try:
-        subprocess.run(['python', 'code/frame_extract.py',file_name])
+        subprocess.run(['python3', 'frame_extract.py',file_name])
     except FileNotFoundError:
         print("Unable to find the file 'frame_extract.py'.")
     try:
-        subprocess.run(['python', 'code/draw_area.py',file_name])
+        subprocess.run(['python3', 'draw_area.py',file_name])
     except FileNotFoundError:
         print("Unable to find the file 'draw_area.py'.")
     try:
-        subprocess.run(['python', 'code/videotest.py',file_name])
+        subprocess.run(['python3', 'videotest.py',file_name])
     except FileNotFoundError:
         print("Unable to find the file 'videotest.py'.")
 
