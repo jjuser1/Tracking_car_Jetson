@@ -41,28 +41,34 @@ CCTV영상 기반 차선 및 차량 구분을 통한 톨게이트 비용 청구 
 사진추출 파트
    ![image](https://github.com/jjuser1/AI_/assets/145631638/9c1f9371-12d8-4c27-a9a1-6336a5767981)
    ![image](https://github.com/jjuser1/AI_/assets/145631638/9faae457-52d0-4555-a6c9-fe6ef5bd04ec)
+
 사진에서 영역 설정
 ![image](https://github.com/jjuser1/AI_/assets/145631638/7e466701-8891-4262-aa33-aa30472820fa)
 ![image](https://github.com/jjuser1/AI_/assets/145631638/beb51977-842c-4967-ad9c-59a6a3360554)
 
-추론 및 비쵸, 요금 책정
+추론 및 비교, 요금 책정
 
 ![image](https://github.com/jjuser1/AI_/assets/145631638/d6d10655-349d-4b04-9b3b-31b75e048896)
+
 바운딩 박스에서 빨간 색 좌표가 영역에 들어가면 가격 스택에 한개씩 쌓이게 되고 UI에서 확인 가능하다.
 
 엔터키를 사용하여 요금을 뺄 수 있다.(요금을 무인 시스템으로 청구하는 시스템은 개발하지 않았으며, 요금을 쌓아 놓기만 한다.)
 
 4. AI 최적화
+
    .pt 모델을 .engine으로 배포하여 최적화 하였습니다.
+
    ![image](https://github.com/jjuser1/AI_/assets/145631638/7725854b-e833-45f8-a5cb-d8f6cc5fada5)
+
 .pt 는 한 프레임당 동작하는 속도가 최소 63ms 최대 105ms로 모델이 추적하는데 시간이 많이 소요되었다.
 
 ![image](https://github.com/jjuser1/AI_/assets/145631638/bc656014-c1f3-4db5-a581-fe3e3878e66a)
+
 .engine (TensorRT) 결과는 위의 사진과 같다. 한 프레임마다 소요된 시간은 평균적으로 40ms로 모두 50ms를 초과하지 않는다. 이 는 사용자가 detecting된 화면을 봤을 때 더 매끄럽게 영상이 흘러가는 것처럼 느껴진다.
 
 
-
-
+5. 영상 유튜브 링크
+https://youtu.be/Y2z1SrIJO5M?si=_RFISeRM8fkoeT94 
 
 
 
